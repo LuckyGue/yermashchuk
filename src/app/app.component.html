@@ -1,0 +1,18 @@
+
+<div class="card">
+  <p-menubar [model]="items">
+
+    <ng-template pTemplate="end">
+      <span>
+        <p-button icon="pi pi-shopping-cart" label="Корзина" badge="{{shopCount}}" (click)="toShop()"></p-button>
+      </span>
+      <span class="ml-3">
+        <p-button icon="pi pi-star-fill" label="Обране" badge="{{starsCount}}" (click)="toStars()"></p-button>
+      </span>
+    </ng-template>
+  </p-menubar>
+</div>
+
+<p-toast position="bottom-center"></p-toast>
+<p-confirmPopup></p-confirmPopup>
+<router-outlet></router-outlet>
